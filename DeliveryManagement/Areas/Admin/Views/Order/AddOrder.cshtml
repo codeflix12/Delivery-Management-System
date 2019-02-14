@@ -1,0 +1,390 @@
+﻿@model DeliveryManagement.order_master
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+    <title>Add Order</title>
+    @*        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">*@
+
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="~/Content/Admin/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="~/Content/Admin/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="~/Content/Admin/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="~/Content/Admin/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="~/Content/Admin/vendor/pnotify/pnotify.custom.css" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="~/Content/Admin/stylesheets/theme.css" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="~/Content/Admin/stylesheets/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="~/Content/Admin/stylesheets/theme-custom.css">
+
+		<!-- Head Libs -->
+		<script src="~/Content/Admin/vendor/modernizr/modernizr.js"></script>
+
+
+
+
+    @{Html.RenderAction("Style", "Include");}
+</head>
+<body>
+    <!-- Left Panel -->
+
+    @{Html.RenderAction("SideNav", "Include");}
+    <!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        @{Html.RenderAction("Header", "Include");}
+        <!-- /header -->
+        <!-- Header-->
+
+        
+
+        @using (Html.BeginForm())
+        {
+                 
+            <div class="content mt-3">
+                <div class="animated fadeIn">
+
+
+                    <div class="row">
+
+                        <!--/.col-->
+
+                        <div class="col-lg-11" style="float:right">
+                            <div class="card">
+                                <div class="card-header"><strong>Add New</strong><small> Order</small></div>
+
+                                <div class="card-body card-block">
+                                    <div class="form-group">
+                                        <label for="company" class=" form-control-label">Mobile Number</label>
+                                        @Html.TextBoxFor(model => model.mobileno, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.mobileno)
+                                    </div>
+                                    @*<input type="text" id="company" placeholder="Enter your Mobile Number" class="form-control"></div>*@
+                                   
+                                        <div class="card-header">
+                                <strong>PickUp Info</strong> Form
+                                        </div> 
+                                    <br>
+                                     <div class="form-group">
+                                        <label for="vat" class=" form-control-label">Pickup Person</label>
+                                        @Html.TextBoxFor(model => model.collectperson, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.collectperson)
+                                    </div>
+                                    @*<input type="text" id="vat" placeholder="Enter Name of Pickup Person" class="form-control"></div>*@
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Pickup Contact</label>
+                                        @Html.TextBoxFor(model => model.collectphone, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.collectphone)
+                                    </div>
+                                    @*<input type="text" id="street" placeholder="Contact of Pickup Person" class="form-control"></div>*@
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Pickup Item</label>
+                                        @Html.TextBoxFor(model => model.deliveryitem, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.deliveryitem)
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Pickup Address</label>
+                                        @Html.TextBoxFor(model => model.pickupaddress, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.pickupaddress)
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Pickup Area</label>
+                                        @Html.TextBoxFor(model => model.pickuparea, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.pickuparea)
+                                          </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-12">
+                                            <label for="textarea-input" class=" form-control-label">PickUp Message 1</label>
+                                       
+                                        @Html.TextAreaFor(model => model.pickupmessage1, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.pickupmessage1) </div>
+                                        @*<textarea name="textarea-input" id="msg1" rows="9" placeholder="Content..." class="form-control"></textarea>*@
+                                    </div>
+                                    
+                                    <div class="card-header">
+                                <strong>Delivery Info</strong> Form
+                                        </div> 
+                                    <br />
+                                    @*<input type="text" id="item" placeholder="Enter Item to be PickedUp" class="form-control"></div>*@
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Contact Number of Delivery Person</label>
+                                        @Html.TextBoxFor(model => model.deliverycontact, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.deliverycontact)
+                                    </div>
+
+                                    @*<input type="text" id="deliverycontact" placeholder="Contact Number of Delivery Person" class="form-control"></div>*@
+                                    
+                                    @*<input type="text" id="padd" placeholder="Pickup Address" class="form-control"></div>*@
+                                    <div class="form-group">
+                                        <label for="street" class=" form-control-label">Delivery Address</label>
+                                        @Html.TextBoxFor(model => model.deliveryaddress, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.deliveryaddress)
+                                    </div>
+                                    @*<input type="text" id="dadd" placeholder="Delivery Address" class="form-control"></div>*@
+                                @* <div class="row form-group">*@
+                                       @*<div class="col col-md-9">
+                                       <label for="textarea-input" class=" form-control-label">Message 1</label>
+                                       
+                                        @Html.TextAreaFor(model => model.pickupmessage1, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.pickupmessage1) </div>
+                                        @*<textarea name="textarea-input" id="msg1" rows="9" placeholder="Content..." class="form-control"></textarea></div>*@
+                                  
+                                 
+                                    <div class="form-group">
+                                         <label for="street" class=" form-control-label">Delivery Area</label>
+                                        @Html.TextBoxFor(model => model.deliveryarea, new { maxlength = 200, @class = "form-control date" })
+                                        @Html.ValidationMessageFor(model => model.deliveryarea)
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div style="margin-left:50px">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Billing Info</strong> Form
+                            </div>
+                            <div class="card-body card-block">
+                                @*<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">*@
+                                <div class="row form-group">
+                                    @*<div class="col col-md-3"><label class=" form-control-label">OrderID</label></div>
+                            <div class="col-12 col-md-9">
+                              <p class="form-control-static">UserId</p>
+                            </div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">Billing Type</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.billingtype, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.billingtype)
+                                    </div>
+                                    @*<input type="text" id="billtype" name="text-input" placeholder="Enter Billing Type" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="email-input" class=" form-control-label">Bill To</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.billto, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.billto)
+                                    </div>
+                                    @*<input type="email" id="email-input" name="billto" placeholder="Enter Name" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="password-input" class=" form-control-label">Charge</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.deliverycharge, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.deliverycharge)
+                                    </div>
+                                    @*<input type="password" id="charge" name="password-input" placeholder="Charge Applicable" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="disabled-input" class=" form-control-label">POB</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.pob, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.pob)
+                                    </div>
+                                    @*<input type="text" id="pob" name="disabled-input" placeholder="POB" disabled="" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="disabled-input" class=" form-control-label">Collect To</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.tocollect, new { maxlength = 200, @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.tocollect)
+                                    </div>
+
+                                    @*<input type="text" id="collect" name="disabled-input" placeholder="Collect To" disabled="" class="form-control"></div>*@
+                                </div>
+                                @*</form>*@
+                            </div>
+                        </div>
+                    </div>
+                                                
+                    <div class="col-lg-6" style="margin-left:0px">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Order Info</strong> Form
+                            </div>
+                            <div class="card-body card-block">
+                                @* <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">*@
+                                @*<div class="row form-group">
+                            <div class="col col-md-3"><label class=" form-control-label">OrderID</label></div>
+                            <div class="col-12 col-md-9">
+                              <p class="form-control-static">UserId</p>
+                            </div>
+                          </div>*@
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">Order Date</label>
+                                    </div>
+                                    <div class="col-12 col-md-9 input-group date">
+                                        @Html.TextBoxFor(model => model.orderdate, new { maxlength = 200, @class = "form-control", id = "datepicker1" })
+                                        @Html.ValidationMessageFor(model => model.orderdate)
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                        <script>
+                                            $(function () {
+                                                $("#datepicker1").datepicker({
+                                                    dateFormat : 'dd-mm-yy'
+                                                });
+                                            });
+                                            //$("format").on("change", function () {
+                                            //    $("#datepicker1").datepicker("dateFormat", $(this).val());
+                                            //});
+                                        </script> 
+                                    </div>
+                                    @*<input type="text" id="orderdate" name="text-input" placeholder="Enter Order Date" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label class=" form-control-label">Delivery Date</label>
+                                    </div>
+                                    <div class="col-12 col-md-9 input-group date">
+                                        @Html.TextBoxFor(model => model.deliverydate, new { maxlength = 200, @class = "form-control", id = "datepicker2" })
+                                        @Html.ValidationMessageFor(model => model.deliverydate)
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+
+                                        <script>
+                                            $(function () {
+                                                $("#datepicker2").datepicker({
+                                                    dateFormat : 'dd-mm-yy'
+                                                });
+                                                //$("#format").on("change", function () {
+                                                //    $("#datepicker2").datepicker("dateFormat", $(this).val());
+                                                //});
+                                            });
+                                         </script>
+                                        @*                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>*@
+                                    </div>
+                                    @*<input type="email" id="deldate" name="billto" placeholder="Enter Delivery Date" class="form-control"></div>*@
+
+                                </div>
+                                <div class="row form-group">
+                                    @*<div class="col col-md-3">
+                                        <label for="password-input" class=" form-control-label">PickUp Area</label>
+                                    </div>*@
+                                    
+                                    @*<input type="password" id="pickarea" name="password-input" placeholder="Enter PickUp Area" class="form-control"></div>*@
+                                </div>
+                                <div class="row form-group">
+                                   @* <div class="col col-md-3">
+                                        <label for="disabled-input" class=" form-control-label">Delivery Area</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        @Html.TextBoxFor(model => model.deliveryarea, new { maxlength = 200, @class = "form-control date" })
+                                        @Html.ValidationMessageFor(model => model.deliveryarea)
+                                    </div>*@
+                                    @*<input type="text" id="delarea" name="disabled-input" placeholder="Enter Delivery Area" disabled="" class="form-control"></div>*@
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card-footer">
+                        <i class="fa fa-dot-circle-o">
+                            <input type="submit" class="btn btn-primary btn-sm" style="padding: 5px;" value="Submit" />
+                        </i>
+                        <i class="fa fa-dot-circle-o">
+                            <input type="reset" class="btn btn-primary btn-sm" style="padding: 5px;" value="Reset" />
+                        </i>
+
+                    </div>
+
+
+
+                </div>
+                <!-- .animated -->
+
+            </div>
+            <!-- .content -->
+			      
+        }
+    </div>
+    <!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+            <script src="~/Content/Admin/vendor/jquery/jquery.js"></script>
+		<script src="~/Content/Admin/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="~/Content/Admin/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="~/Content/Admin/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="~/Content/Admin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="~/Content/Admin/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="~/Content/Admin/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+		
+		<!-- Specific Page Vendor -->
+		<script src="~/Content/Admin/vendor/jquery-validation/jquery.validate.js"></script>
+		<script src="~/Content/Admin/vendor/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+		<script src="~/Content/Admin/vendor/pnotify/pnotify.custom.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="~/Content/Admin/javascripts/theme.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="~/Content/Admin/javascripts/theme.custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="~/Content/Admin/javascripts/theme.init.js"></script>
+
+
+		<!-- Examples -->
+		<script src="~/Content/Admin/javascripts/forms/examples.wizard.js"></script>
+
+    <script src="~/Content/Admin/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/Admin/js/popper.min.js"></script>
+    <script src="~/Content/Admin/js/plugins.js"></script>
+    <script src="~/Content/Admin/js/main.js"></script>
+
+
+</body>
+</html>
+
+
+
+

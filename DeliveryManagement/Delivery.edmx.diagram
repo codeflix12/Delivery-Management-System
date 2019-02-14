@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e86905af556c46f2a5f0fba37c7f9d08" Name="Diagram1">
+        <EntityTypeShape EntityType="DeliveryModel.admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliveryModel.Utility" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliveryModel.order_master" Width="1.5" PointX="0.083905806804031979" PointY="5.7342981871842866" />
+        <EntityTypeShape EntityType="DeliveryModel.driverdetail" Width="1.5" PointX="6.5221678104820509" PointY="4.9682864122876369" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

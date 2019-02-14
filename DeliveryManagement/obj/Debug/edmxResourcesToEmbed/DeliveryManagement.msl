@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DeliveryModelStoreContainer" CdmEntityContainer="DeliveryEntities">
+    <EntitySetMapping Name="Utilities">
+      <EntityTypeMapping TypeName="DeliveryModel.Utilities">
+        <MappingFragment StoreEntitySet="Utilities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sitename" ColumnName="sitename" />
+          <ScalarProperty Name="sitelogo" ColumnName="sitelogo" />
+          <ScalarProperty Name="siteurl" ColumnName="siteurl" />
+          <ScalarProperty Name="MailServer" ColumnName="MailServer" />
+          <ScalarProperty Name="from" ColumnName="from" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Authenticate" ColumnName="Authenticate" />
+          <ScalarProperty Name="emailtop" ColumnName="emailtop" />
+          <ScalarProperty Name="emailbottom" ColumnName="emailbottom" />
+          <ScalarProperty Name="port" ColumnName="port" />
+          <ScalarProperty Name="pagination" ColumnName="pagination" />
+          <ScalarProperty Name="sitebyname" ColumnName="sitebyname" />
+          <ScalarProperty Name="sitebyurl" ColumnName="sitebyurl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin">
+      <EntityTypeMapping TypeName="DeliveryModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

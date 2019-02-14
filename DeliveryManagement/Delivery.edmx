@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DeliveryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DeliveryModelStoreContainer">
+          <EntitySet Name="admin" EntityType="DeliveryModel.Store.admin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="driverdetails" EntityType="DeliveryModel.Store.driverdetails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="order_master" EntityType="DeliveryModel.Store.order_master" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Utilities" EntityType="DeliveryModel.Store.Utilities" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="nchar" MaxLength="10" />
+          <Property Name="password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="driverdetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="driverid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="drivername" Type="nvarchar(max)" />
+          <Property Name="age" Type="nvarchar" MaxLength="50" />
+          <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar(max)" />
+          <Property Name="licanceno" Type="nvarchar(max)" />
+          <Property Name="vehicleno" Type="nvarchar" MaxLength="50" />
+          <Property Name="residenceno" Type="nvarchar" MaxLength="50" />
+          <Property Name="familyno" Type="nvarchar" MaxLength="50" />
+          <Property Name="relation" Type="nvarchar(max)" />
+          <Property Name="bgroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankname" Type="nvarchar(max)" />
+          <Property Name="branchname" Type="nvarchar(max)" />
+          <Property Name="acno" Type="nvarchar(max)" />
+          <Property Name="ifsccode" Type="nvarchar(max)" />
+          <Property Name="isactive" Type="bit" />
+        </EntityType>
+        <EntityType Name="order_master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="driverid" Type="bigint" />
+          <Property Name="orderstatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+          <Property Name="orderno" Type="bigint" />
+          <Property Name="pickupperson" Type="nvarchar(max)" />
+          <Property Name="pickupcontact" Type="nvarchar" MaxLength="50" />
+          <Property Name="pickupitem" Type="nvarchar(max)" />
+          <Property Name="deliveryperson" Type="nvarchar(max)" />
+          <Property Name="deliverycontact" Type="nvarchar" MaxLength="50" />
+          <Property Name="deliveryitem" Type="nvarchar(max)" />
+          <Property Name="pickupaddress" Type="nvarchar(max)" />
+          <Property Name="deliveryaddress" Type="nvarchar(max)" />
+          <Property Name="pickupmessage1" Type="nvarchar(max)" />
+          <Property Name="pickupmessage2" Type="nvarchar(max)" />
+          <Property Name="pickupmessage3" Type="nvarchar(max)" />
+          <Property Name="pickupmessage4" Type="nvarchar(max)" />
+          <Property Name="pickupmessage5" Type="nvarchar(max)" />
+          <Property Name="billingtype" Type="nvarchar" MaxLength="50" />
+          <Property Name="billto" Type="nvarchar(max)" />
+          <Property Name="deliverycharge" Type="nvarchar(max)" />
+          <Property Name="pob" Type="nvarchar(max)" />
+          <Property Name="tocollect" Type="nvarchar(max)" />
+          <Property Name="orderdate" Type="datetime" />
+          <Property Name="deliverdate" Type="datetime" />
+          <Property Name="pickuparea" Type="nvarchar(max)" />
+          <Property Name="deliveryarea" Type="nvarchar(max)" />
+          <Property Name="startpickupkh" Type="numeric" Scale="2" />
+          <Property Name="startpickupdate" Type="datetime" />
+          <Property Name="pickuprichkh" Type="numeric" Scale="2" />
+          <Property Name="pickuprichdate" Type="datetime" />
+          <Property Name="pickupitemdate" Type="datetime" />
+          <Property Name="startdeliverykh" Type="numeric" Scale="2" />
+          <Property Name="startdeliverydate" Type="datetime" />
+          <Property Name="deliveryrichkh" Type="numeric" Scale="2" />
+          <Property Name="deliverydate" Type="datetime" />
+          <Property Name="collectperson" Type="nvarchar(max)" />
+          <Property Name="collectphone" Type="nvarchar" MaxLength="50" />
+          <Property Name="billno" Type="nvarchar(max)" />
+          <Property Name="yourorderno" Type="nvarchar" MaxLength="50" />
+          <Property Name="isread" Type="nvarchar" MaxLength="50" />
+          <Property Name="isremove" Type="nvarchar" MaxLength="50" />
+          <Property Name="isactive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Utilities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sitename" Type="varchar" MaxLength="100" />
+          <Property Name="sitelogo" Type="varchar" MaxLength="100" />
+          <Property Name="siteurl" Type="varchar" MaxLength="100" />
+          <Property Name="MailServer" Type="varchar" MaxLength="100" />
+          <Property Name="from" Type="varchar" MaxLength="100" />
+          <Property Name="cc" Type="varchar" MaxLength="500" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="Authenticate" Type="int" />
+          <Property Name="emailtop" Type="varchar" MaxLength="100" />
+          <Property Name="emailbottom" Type="varchar" MaxLength="100" />
+          <Property Name="port" Type="int" />
+          <Property Name="pagination" Type="int" />
+          <Property Name="sitebyname" Type="varchar" MaxLength="200" />
+          <Property Name="sitebyurl" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Function Name="getdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DeliveryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DeliveryEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="admins" EntityType="DeliveryModel.admin" />
+          <EntitySet Name="Utilities" EntityType="DeliveryModel.Utility" />
+          <EntitySet Name="order_master" EntityType="DeliveryModel.order_master" />
+          <EntitySet Name="driverdetails" EntityType="DeliveryModel.driverdetail" />
+          <FunctionImport Name="getdata" ReturnType="Collection(DeliveryModel.getdata_Result)" />
+          <FunctionImport Name="getdata1" EntitySet="order_master" ReturnType="Collection(DeliveryModel.order_master)" />
+        </EntityContainer>
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="password" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Utility">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="sitename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sitelogo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="siteurl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="MailServer" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="from" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="cc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Authenticate" Type="Int32" />
+          <Property Name="emailtop" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="emailbottom" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="port" Type="Int32" />
+          <Property Name="pagination" Type="Int32" />
+          <Property Name="sitebyname" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="sitebyurl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="order_master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="driverid" />
+          <Property Type="String" Name="orderstatus" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="mobileno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="orderno" />
+          <Property Type="String" Name="pickupperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupcontact" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupitem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliveryperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliverycontact" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliveryitem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupaddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliveryaddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupmessage1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupmessage2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupmessage3" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupmessage4" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pickupmessage5" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="billingtype" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="billto" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliverycharge" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pob" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="tocollect" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="orderdate" Precision="3" />
+          <Property Type="DateTime" Name="deliverdate" Precision="3" />
+          <Property Type="String" Name="pickuparea" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="deliveryarea" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="startpickupkh" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="startpickupdate" Precision="3" />
+          <Property Type="Decimal" Name="pickuprichkh" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="pickuprichdate" Precision="3" />
+          <Property Type="DateTime" Name="pickupitemdate" Precision="3" />
+          <Property Type="Decimal" Name="startdeliverykh" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="startdeliverydate" Precision="3" />
+          <Property Type="Decimal" Name="deliveryrichkh" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="deliverydate" Precision="3" />
+          <Property Type="String" Name="collectperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="collectphone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="billno" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="yourorderno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="isread" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="isremove" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="isactive" />
+        </EntityType>
+        <EntityType Name="driverdetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Guid" Name="driverid" Nullable="false" />
+          <Property Type="String" Name="drivername" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="age" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="mobileno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="address" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="licanceno" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="vehicleno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="residenceno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="familyno" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="relation" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="bgroup" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="bankname" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="branchname" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="acno" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ifsccode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="isactive" />
+        </EntityType>
+        <ComplexType Name="getdata_Result">
+          <Property Type="String" Name="mobileno" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="deliveryitem" Nullable="true" />
+          <Property Type="String" Name="deliverycontact" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="deliverycharge" Nullable="true" />
+          <Property Type="DateTime" Name="deliverydate" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DeliveryModelStoreContainer" CdmEntityContainer="DeliveryEntities1">
+          <EntitySetMapping Name="admins">
+            <EntityTypeMapping TypeName="DeliveryModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Utilities">
+            <EntityTypeMapping TypeName="DeliveryModel.Utility">
+              <MappingFragment StoreEntitySet="Utilities">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sitename" ColumnName="sitename" />
+                <ScalarProperty Name="sitelogo" ColumnName="sitelogo" />
+                <ScalarProperty Name="siteurl" ColumnName="siteurl" />
+                <ScalarProperty Name="MailServer" ColumnName="MailServer" />
+                <ScalarProperty Name="from" ColumnName="from" />
+                <ScalarProperty Name="cc" ColumnName="cc" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Authenticate" ColumnName="Authenticate" />
+                <ScalarProperty Name="emailtop" ColumnName="emailtop" />
+                <ScalarProperty Name="emailbottom" ColumnName="emailbottom" />
+                <ScalarProperty Name="port" ColumnName="port" />
+                <ScalarProperty Name="pagination" ColumnName="pagination" />
+                <ScalarProperty Name="sitebyname" ColumnName="sitebyname" />
+                <ScalarProperty Name="sitebyurl" ColumnName="sitebyurl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_master">
+            <EntityTypeMapping TypeName="DeliveryModel.order_master">
+              <MappingFragment StoreEntitySet="order_master">
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="isremove" ColumnName="isremove" />
+                <ScalarProperty Name="isread" ColumnName="isread" />
+                <ScalarProperty Name="yourorderno" ColumnName="yourorderno" />
+                <ScalarProperty Name="billno" ColumnName="billno" />
+                <ScalarProperty Name="collectphone" ColumnName="collectphone" />
+                <ScalarProperty Name="collectperson" ColumnName="collectperson" />
+                <ScalarProperty Name="deliverydate" ColumnName="deliverydate" />
+                <ScalarProperty Name="deliveryrichkh" ColumnName="deliveryrichkh" />
+                <ScalarProperty Name="startdeliverydate" ColumnName="startdeliverydate" />
+                <ScalarProperty Name="startdeliverykh" ColumnName="startdeliverykh" />
+                <ScalarProperty Name="pickupitemdate" ColumnName="pickupitemdate" />
+                <ScalarProperty Name="pickuprichdate" ColumnName="pickuprichdate" />
+                <ScalarProperty Name="pickuprichkh" ColumnName="pickuprichkh" />
+                <ScalarProperty Name="startpickupdate" ColumnName="startpickupdate" />
+                <ScalarProperty Name="startpickupkh" ColumnName="startpickupkh" />
+                <ScalarProperty Name="deliveryarea" ColumnName="deliveryarea" />
+                <ScalarProperty Name="pickuparea" ColumnName="pickuparea" />
+                <ScalarProperty Name="deliverdate" ColumnName="deliverdate" />
+                <ScalarProperty Name="orderdate" ColumnName="orderdate" />
+                <ScalarProperty Name="tocollect" ColumnName="tocollect" />
+                <ScalarProperty Name="pob" ColumnName="pob" />
+                <ScalarProperty Name="deliverycharge" ColumnName="deliverycharge" />
+                <ScalarProperty Name="billto" ColumnName="billto" />
+                <ScalarProperty Name="billingtype" ColumnName="billingtype" />
+                <ScalarProperty Name="pickupmessage5" ColumnName="pickupmessage5" />
+                <ScalarProperty Name="pickupmessage4" ColumnName="pickupmessage4" />
+                <ScalarProperty Name="pickupmessage3" ColumnName="pickupmessage3" />
+                <ScalarProperty Name="pickupmessage2" ColumnName="pickupmessage2" />
+                <ScalarProperty Name="pickupmessage1" ColumnName="pickupmessage1" />
+                <ScalarProperty Name="deliveryaddress" ColumnName="deliveryaddress" />
+                <ScalarProperty Name="pickupaddress" ColumnName="pickupaddress" />
+                <ScalarProperty Name="deliveryitem" ColumnName="deliveryitem" />
+                <ScalarProperty Name="deliverycontact" ColumnName="deliverycontact" />
+                <ScalarProperty Name="deliveryperson" ColumnName="deliveryperson" />
+                <ScalarProperty Name="pickupitem" ColumnName="pickupitem" />
+                <ScalarProperty Name="pickupcontact" ColumnName="pickupcontact" />
+                <ScalarProperty Name="pickupperson" ColumnName="pickupperson" />
+                <ScalarProperty Name="orderno" ColumnName="orderno" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="orderstatus" ColumnName="orderstatus" />
+                <ScalarProperty Name="driverid" ColumnName="driverid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="driverdetails">
+            <EntityTypeMapping TypeName="DeliveryModel.driverdetail">
+              <MappingFragment StoreEntitySet="driverdetails">
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="ifsccode" ColumnName="ifsccode" />
+                <ScalarProperty Name="acno" ColumnName="acno" />
+                <ScalarProperty Name="branchname" ColumnName="branchname" />
+                <ScalarProperty Name="bankname" ColumnName="bankname" />
+                <ScalarProperty Name="bgroup" ColumnName="bgroup" />
+                <ScalarProperty Name="relation" ColumnName="relation" />
+                <ScalarProperty Name="familyno" ColumnName="familyno" />
+                <ScalarProperty Name="residenceno" ColumnName="residenceno" />
+                <ScalarProperty Name="vehicleno" ColumnName="vehicleno" />
+                <ScalarProperty Name="licanceno" ColumnName="licanceno" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="drivername" ColumnName="drivername" />
+                <ScalarProperty Name="driverid" ColumnName="driverid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getdata" FunctionName="DeliveryModel.Store.getdata">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DeliveryModel.getdata_Result">
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="deliveryitem" ColumnName="deliveryitem" />
+                <ScalarProperty Name="deliverycontact" ColumnName="deliverycontact" />
+                <ScalarProperty Name="deliverycharge" ColumnName="deliverycharge" />
+                <ScalarProperty Name="deliverydate" ColumnName="deliverydate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getdata1" FunctionName="DeliveryModel.Store.getdata" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

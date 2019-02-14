@@ -1,0 +1,214 @@
+﻿
+@model DeliveryManagement.driverdetail
+
+@{
+    ViewBag.Title = "AddDriver";
+   // Layout = "~/Areas/Admin/Views/Shared/AdminLogin.cshtml";
+}
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    
+    <head>
+    @{Html.RenderAction("Style","Include");}
+    </head>
+
+<body>
+        <!-- Left Panel -->
+
+     @{Html.RenderAction("SideNav","Include");}<!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+    
+   <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        @{Html.RenderAction("Header", "Include");}
+       <!-- /header -->
+        <!-- Header-->
+        
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+                    @using (Html.BeginForm())
+                    {
+                 <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header"><strong>Driver Registration</strong><small> Form</small></div>
+                            <div class="card-body card-block">
+                                <div class="form-group">
+                                    
+                                    @*<label>Driver ID:</label>*@ 
+                                   @* @{Random r = new Random();
+                                     var driverid = r.Next(10000, 99999).ToString();
+                                      @driverid}
+                                  *@  
+                                    @Html.HiddenFor(model => model.driverid, new{maxlength =  100})
+                                    <br />
+                                    <label for="company" class=" form-control-label">Driver Name</label>
+                                    @Html.TextBoxFor(model => model.drivername, new { maxlength = 200 , @class = "form-control" } )
+                            @Html.ValidationMessageFor(model => model.drivername)
+                        
+                                    @*<label for="company" class=" form-control-label">Driver ID</label>
+                                    @Html.TextBoxFor(model => model.driverid, new { maxlength = 200 , @class = "form-control" } )
+                            @Html.ValidationMessageFor(model => model.driverid)*@
+
+                                  @* <input type="text" id="drivername" placeholder="Enter your name" class="form-control">*@</div>
+                                <div class="form-group">
+                                    <label for="vat" class=" form-control-label">Age</label>
+                                    @Html.TextBoxFor(model => model.age, new { maxlength = 50 , @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.age)
+                        
+                                    @*<input type="text" id="age" placeholder="Enter Your Age" class="form-control">*@</div>
+                                <div class="form-group">
+                                    <label for="street" class=" form-control-label">Mobile Number</label>
+                                    @Html.TextBoxFor(model => model.mobileno, new { maxlength = 200, @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.mobileno)
+                        </div>
+
+                                    @*<input type="text" id="mobileno" placeholder="Enter Mobile Number" class="form-control">*@
+                                <div class="row form-group">
+                                    @*<div class="col-8">
+                            <div class="form-group"><label for="Address" class=" form-control-label">Address</label><input type="text" id="city" placeholder="Enter your Address" class="form-control"></div>
+                          </div>
+                          *@   </div> 
+                                     
+                                    
+                                    <div class="form-group">
+                                    <label for="License" class=" form-control-label">License Number</label>
+                                        @Html.TextBoxFor(model => model.licanceno, new { maxlength = 200, @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.licanceno)
+                        
+                                        @*<input type="text" id="Licenseno" placeholder="License Number" class="form-control">*@</div>
+                               
+                                    
+                                        <div class="form-group">
+                                    <label for="License" class=" form-control-label">Vehicle Number</label>
+                                            @Html.TextBoxFor(model => model.vehicleno, new { maxlength = 200 , @class = "form-control"})
+                            @Html.ValidationMessageFor(model => model.vehicleno)
+                        @*<input type="text" id="vehicleno" placeholder="Vehicle Number" class="form-control">*@</div>
+                                <div class="form-group">
+                                        <label for="textarea-input" class=" form-control-label">Address</label>
+                                    
+                                        @Html.TextAreaFor(model => model.address, new { maxlength = 200 ,@class="form-control" })
+                            @Html.ValidationMessageFor(model => model.address)
+                        
+                                        @*<textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Address..." class="form-control"></textarea></div>*@
+                                    <br />
+                                   
+                                </div>
+                                
+                                <br />
+                                <br />
+                                <div class="card-header"><strong>Alternate Contact Details</strong><small> Form</small></div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                    <label for="License" class=" form-control-label">Alternate Mobile Number</label>
+                                            @Html.TextBoxFor(model => model.residenceno, new { maxlength = 200, @class="form-control" })
+                            @Html.ValidationMessageFor(model => model.residenceno)
+                        
+                                           @* <input type="text" id="altno" placeholder="Alternate Mobile Number" class="form-control">*@</div>
+                                </div>
+                                        
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                    <label for="License" class=" form-control-label">Relation with person</label>
+                                            @Html.TextBoxFor(model => model.relation, new { maxlength = 200 , @class="form-control" })
+                            @Html.ValidationMessageFor(model => model.relation)
+                       @* <input type="text" id="relation" placeholder="RElation of FAmily Member" class="form-control">*@</div>
+                               </div>
+                                    <div class="col-12">
+                                         <div class="form-group">
+                                    <label for="License" class=" form-control-label">Blood Group</label>
+                                             @Html.TextBoxFor(model => model.bgroup, new { maxlength = 200 , @class="form-control" })
+                            @Html.ValidationMessageFor(model => model.bgroup)
+                        @*<input type="text" id="bgroup" placeholder="Blood Group" class="form-control">*@</div>
+                                </div>
+                                
+                                <br />
+                                <br />
+
+                                <div class="card-header"><strong>Bank Details</strong><small> Form</small></div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                    <label for="License" class=" form-control-label">Bank Name</label>
+                                            @Html.TextBoxFor(model => model.bankname, new { maxlength = 200 , @class="form-control" })
+                            @Html.ValidationMessageFor(model => model.bankname)
+                        @*<input type="text" id="bankname" placeholder="Bank Name" class="form-control">*@</div>
+                            </div>
+                                       <div class="col-12">
+                                         <div class="form-group">
+                                    <label for="License" class=" form-control-label">Branch Name</label>
+                                             @Html.TextBoxFor(model => model.branchname, new { maxlength = 200 , @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.branchname)
+                        
+                                            @* <input type="text" id="branchname" placeholder="Branch Name" class="form-control"></div>*@
+                                </div></div>
+                                    <div class="col-12">
+                                           
+                                           <div class="form-group">
+                                    <label for="License" class=" form-control-label">Account Number</label>
+                                               @Html.TextBoxFor(model => model.acno, new { maxlength = 200 , @class="form-control" })
+                            @Html.ValidationMessageFor(model => model.acno)
+                        
+                                               @*<input type="text" id="accno" placeholder="Account Number" class="form-control">*@</div>
+                                </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                    <label for="License" class=" form-control-label">IFSC Code</label>
+                                            @Html.TextBoxFor(model => model.ifsccode, new { maxlength = 200 , @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.ifsccode) 
+                        
+                                            @*<input type="text" id="ifsccode" placeholder="IFSC Code" class="form-control">*@</div>
+                                </div>
+                                    <div class="col-12">
+                                        <div class="row form-group">
+                                    </div></div>
+                                      @*  <div class="col-12">*@
+                              @*<div class="form-group">
+                                  <label for="postal-code" class=" form-control-label">Postal Code</label>*@
+                                @*  @Html.TextBoxFor(model => model.postalcode, new { maxlength = 200, @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.postalcode)
+                        *@
+                                  @*<input type="text" id="postalcode" placeholder="Postal Code" class="form-control">*@@*</div>*@
+                          @*</div>*@
+                                        
+                            <div>
+                                    <input type="submit" class="btn btn-primary btn-sm" value="submit"/>
+                                        <i class="fa fa-dot-circle-o"></i>
+                                        
+                                </div>
+ 
+                                            </div>
+                                            </div>
+                                  
+                </div>
+                    }
+            </div>
+         </div>
+         </div>  
+         <!-- /#right-panel -->
+       
+        
+    <!-- Right Panel -->
+           <!-- .animated -->
+               @*@{Html.RenderAction("Footer","Include");}*@
+           <!-- .content -->
+</div>
+                
+    <script src="~/Content/Admin/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/Admin/js/popper.min.js"></script>
+    <script src="~/Content/Admin/js/plugins.js"></script>
+    <script src="~/Content/Admin/js/main.js"></script>
+
+
+</body>
+</html>
+
+    

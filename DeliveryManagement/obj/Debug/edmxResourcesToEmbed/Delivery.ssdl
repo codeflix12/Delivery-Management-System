@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliveryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DeliveryModelStoreContainer">
+    <EntitySet Name="admin" EntityType="DeliveryModel.Store.admin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="driverdetails" EntityType="DeliveryModel.Store.driverdetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="order_master" EntityType="DeliveryModel.Store.order_master" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Utilities" EntityType="DeliveryModel.Store.Utilities" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="nchar" MaxLength="10" />
+    <Property Name="password" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="driverdetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="driverid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="drivername" Type="nvarchar(max)" />
+    <Property Name="age" Type="nvarchar" MaxLength="50" />
+    <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="licanceno" Type="nvarchar(max)" />
+    <Property Name="vehicleno" Type="nvarchar" MaxLength="50" />
+    <Property Name="residenceno" Type="nvarchar" MaxLength="50" />
+    <Property Name="familyno" Type="nvarchar" MaxLength="50" />
+    <Property Name="relation" Type="nvarchar(max)" />
+    <Property Name="bgroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="bankname" Type="nvarchar(max)" />
+    <Property Name="branchname" Type="nvarchar(max)" />
+    <Property Name="acno" Type="nvarchar(max)" />
+    <Property Name="ifsccode" Type="nvarchar(max)" />
+    <Property Name="isactive" Type="bit" />
+  </EntityType>
+  <EntityType Name="order_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="driverid" Type="bigint" />
+    <Property Name="orderstatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+    <Property Name="orderno" Type="bigint" />
+    <Property Name="pickupperson" Type="nvarchar(max)" />
+    <Property Name="pickupcontact" Type="nvarchar" MaxLength="50" />
+    <Property Name="pickupitem" Type="nvarchar(max)" />
+    <Property Name="deliveryperson" Type="nvarchar(max)" />
+    <Property Name="deliverycontact" Type="nvarchar" MaxLength="50" />
+    <Property Name="deliveryitem" Type="nvarchar(max)" />
+    <Property Name="pickupaddress" Type="nvarchar(max)" />
+    <Property Name="deliveryaddress" Type="nvarchar(max)" />
+    <Property Name="pickupmessage1" Type="nvarchar(max)" />
+    <Property Name="pickupmessage2" Type="nvarchar(max)" />
+    <Property Name="pickupmessage3" Type="nvarchar(max)" />
+    <Property Name="pickupmessage4" Type="nvarchar(max)" />
+    <Property Name="pickupmessage5" Type="nvarchar(max)" />
+    <Property Name="billingtype" Type="nvarchar" MaxLength="50" />
+    <Property Name="billto" Type="nvarchar(max)" />
+    <Property Name="deliverycharge" Type="nvarchar(max)" />
+    <Property Name="pob" Type="nvarchar(max)" />
+    <Property Name="tocollect" Type="nvarchar(max)" />
+    <Property Name="orderdate" Type="datetime" />
+    <Property Name="deliverdate" Type="datetime" />
+    <Property Name="pickuparea" Type="nvarchar(max)" />
+    <Property Name="deliveryarea" Type="nvarchar(max)" />
+    <Property Name="startpickupkh" Type="numeric" Scale="2" />
+    <Property Name="startpickupdate" Type="datetime" />
+    <Property Name="pickuprichkh" Type="numeric" Scale="2" />
+    <Property Name="pickuprichdate" Type="datetime" />
+    <Property Name="pickupitemdate" Type="datetime" />
+    <Property Name="startdeliverykh" Type="numeric" Scale="2" />
+    <Property Name="startdeliverydate" Type="datetime" />
+    <Property Name="deliveryrichkh" Type="numeric" Scale="2" />
+    <Property Name="deliverydate" Type="datetime" />
+    <Property Name="collectperson" Type="nvarchar(max)" />
+    <Property Name="collectphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="billno" Type="nvarchar(max)" />
+    <Property Name="yourorderno" Type="nvarchar" MaxLength="50" />
+    <Property Name="isread" Type="nvarchar" MaxLength="50" />
+    <Property Name="isremove" Type="nvarchar" MaxLength="50" />
+    <Property Name="isactive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Utilities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sitename" Type="varchar" MaxLength="100" />
+    <Property Name="sitelogo" Type="varchar" MaxLength="100" />
+    <Property Name="siteurl" Type="varchar" MaxLength="100" />
+    <Property Name="MailServer" Type="varchar" MaxLength="100" />
+    <Property Name="from" Type="varchar" MaxLength="100" />
+    <Property Name="cc" Type="varchar" MaxLength="500" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="Authenticate" Type="int" />
+    <Property Name="emailtop" Type="varchar" MaxLength="100" />
+    <Property Name="emailbottom" Type="varchar" MaxLength="100" />
+    <Property Name="port" Type="int" />
+    <Property Name="pagination" Type="int" />
+    <Property Name="sitebyname" Type="varchar" MaxLength="200" />
+    <Property Name="sitebyurl" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Function Name="getdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

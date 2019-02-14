@@ -1,0 +1,117 @@
+﻿
+@model DeliveryManagement.order_master
+
+@{
+    ViewBag.Title = "Edit Order";
+   // Layout = "~/Areas/Admin/Views/Shared/AdminLogin.cshtml";
+}
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    
+    <head>
+    @{Html.RenderAction("Style","Include");}
+    </head>
+
+<body>
+        <!-- Left Panel -->
+
+     @{Html.RenderAction("SideNav","Include");}<!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+    
+   <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        @{Html.RenderAction("Header", "Include");}
+       <!-- /header -->
+        <!-- Header-->
+        
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+                    @using (Html.BeginForm()){
+                 <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header"><strong>Order Edit</strong><small> Form</small></div>
+                            <div class="card-body card-block">
+                                <div class="form-group">
+                                    
+                                    @*<label>Driver ID:</label>*@ 
+                                   @* @{Random r = new Random();
+                                     var driverid = r.Next(10000, 99999).ToString();
+                                      @driverid}
+                                  *@  @Html.HiddenFor(model => model.driverid, new{maxlength =  100})
+                                    <br />
+                                    <label for="company" class=" form-control-label">Mobile Number</label>
+                                    @Html.TextBoxFor(model => model.mobileno, new { maxlength = 200 , @class = "form-control" } )
+                            @Html.ValidationMessageFor(model => model.mobileno)
+                        
+                                  @* <input type="text" id="drivername" placeholder="Enter your name" class="form-control">*@</div>
+                                <div class="form-group">
+                                    <label for="vat" class=" form-control-label">Delivery Item</label>
+                                    @Html.TextBoxFor(model => model.deliveryitem, new { maxlength = 50 , @class="form-control"})
+                            @Html.ValidationMessageFor(model => model.deliveryitem)
+                        
+                                    @*<input type="text" id="age" placeholder="Enter Your Age" class="form-control">*@</div>
+                                <div class="form-group">
+                                    <label for="street" class=" form-control-label">Delivery Charge</label>
+                                    @Html.TextBoxFor(model => model.deliverycharge, new { maxlength = 200, @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.deliverycharge)
+                        </div>
+
+                             
+                                    <div class="col-12">
+                                    <div class="form-group">
+                                    <label for="License" class=" form-control-label">Delivery Date</label>
+                                        @Html.TextBoxFor(model => model.deliverydate, new { maxlength = 200, @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.deliverydate)
+                        
+                                        @*<input type="text" id="Licenseno" placeholder="License Number" class="form-control">*@</div>
+                                </div>
+                                       
+                                        
+                            <div>
+                                    <input type="submit" class="btn btn-primary btn-sm" value="Update"/>
+                                        <i class="fa fa-dot-circle-o"></i>
+                                        
+                                </div>
+ 
+                                            </div>
+                                            </div>
+                                        </div>
+
+
+                    }
+
+
+                </div>
+
+            </div>
+         
+         </div>  
+         <!-- /#right-panel -->
+       
+        
+    <!-- Right Panel -->
+           <!-- .animated -->
+               @*@{Html.RenderAction("Footer","Include");}*@
+           <!-- .content -->
+</div>
+                
+    <script src="~/Content/Admin/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/Admin/js/popper.min.js"></script>
+    <script src="~/Content/Admin/js/plugins.js"></script>
+    <script src="~/Content/Admin/js/main.js"></script>
+
+
+</body>
+</html>
+
+    

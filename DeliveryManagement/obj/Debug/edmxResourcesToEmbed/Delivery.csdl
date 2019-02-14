@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeliveryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DeliveryEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="admins" EntityType="DeliveryModel.admin" />
+    <EntitySet Name="Utilities" EntityType="DeliveryModel.Utility" />
+    <EntitySet Name="order_master" EntityType="DeliveryModel.order_master" />
+    <EntitySet Name="driverdetails" EntityType="DeliveryModel.driverdetail" />
+    <FunctionImport Name="getdata" ReturnType="Collection(DeliveryModel.getdata_Result)" />
+    <FunctionImport Name="getdata1" EntitySet="order_master" ReturnType="Collection(DeliveryModel.order_master)" />
+  </EntityContainer>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="password" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Utility">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="sitename" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="sitelogo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="siteurl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MailServer" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="from" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="cc" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Authenticate" Type="Int32" />
+    <Property Name="emailtop" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="emailbottom" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="port" Type="Int32" />
+    <Property Name="pagination" Type="Int32" />
+    <Property Name="sitebyname" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="sitebyurl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="order_master">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="driverid" />
+    <Property Type="String" Name="orderstatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="mobileno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="orderno" />
+    <Property Type="String" Name="pickupperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupcontact" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupitem" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliveryperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliverycontact" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliveryitem" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupaddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliveryaddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupmessage1" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupmessage2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupmessage3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupmessage4" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pickupmessage5" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="billingtype" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="billto" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliverycharge" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pob" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="tocollect" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="orderdate" Precision="3" />
+    <Property Type="DateTime" Name="deliverdate" Precision="3" />
+    <Property Type="String" Name="pickuparea" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="deliveryarea" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="startpickupkh" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="startpickupdate" Precision="3" />
+    <Property Type="Decimal" Name="pickuprichkh" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="pickuprichdate" Precision="3" />
+    <Property Type="DateTime" Name="pickupitemdate" Precision="3" />
+    <Property Type="Decimal" Name="startdeliverykh" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="startdeliverydate" Precision="3" />
+    <Property Type="Decimal" Name="deliveryrichkh" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="deliverydate" Precision="3" />
+    <Property Type="String" Name="collectperson" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="collectphone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="billno" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="yourorderno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isread" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isremove" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="isactive" />
+  </EntityType>
+  <EntityType Name="driverdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="driverid" Nullable="false" />
+    <Property Type="String" Name="drivername" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="age" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="mobileno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="address" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="licanceno" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vehicleno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="residenceno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="familyno" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="relation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bgroup" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bankname" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="branchname" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acno" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ifsccode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="isactive" />
+  </EntityType>
+  <ComplexType Name="getdata_Result">
+    <Property Type="String" Name="mobileno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="deliveryitem" Nullable="true" />
+    <Property Type="String" Name="deliverycontact" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="deliverycharge" Nullable="true" />
+    <Property Type="DateTime" Name="deliverydate" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

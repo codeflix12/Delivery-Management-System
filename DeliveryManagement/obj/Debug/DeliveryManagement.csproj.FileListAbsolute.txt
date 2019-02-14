@@ -1,0 +1,87 @@
+D:\Project\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.pdb
+D:\Project\DeliveryManagement\DeliveryManagement\bin\EntityFramework.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\system.web.optimization.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.dll
+D:\Project\DeliveryManagement\DeliveryManagement\bin\EntityFramework.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.xml
+D:\Project\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.xml
+D:\Project\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.dll
+D:\Project\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.pdb
+F:\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.dll
+F:\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.pdb
+F:\DeliveryManagement\DeliveryManagement\bin\EntityFramework.dll
+F:\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.dll
+F:\DeliveryManagement\DeliveryManagement\bin\Microsoft.Web.Infrastructure.dll
+F:\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Net.Http.Formatting.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.WebHost.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.dll
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.dll
+F:\DeliveryManagement\DeliveryManagement\bin\EntityFramework.xml
+F:\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.xml
+F:\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Net.Http.Formatting.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.WebHost.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.xml
+F:\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.xml
+F:\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.dll
+F:\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.pdb
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.csprojResolveAssemblyReference.cache
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.dll
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.dll
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.pdb
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\EntityFramework.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Net.Http.Formatting.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.WebHost.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.xml
+D:\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.pdb
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.dll
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.pdb
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\EntityFramework.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\Newtonsoft.Json.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Net.Http.Formatting.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Helpers.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Http.WebHost.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Mvc.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.Razor.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.csprojResolveAssemblyReference.cache
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.dll
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.pdb
