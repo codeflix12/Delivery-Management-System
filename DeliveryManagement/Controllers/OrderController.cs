@@ -131,7 +131,7 @@ namespace DeliveryManagement.Controllers
 
 
             OrderLogic.Insert(om);
-            return RedirectToAction("ViewDriverByID", "Driver");
+            return RedirectToAction("ViewOrder", "Order");
 
         }
 
@@ -263,6 +263,38 @@ namespace DeliveryManagement.Controllers
             OrderLogic.Update(om);
             return RedirectToAction("ViewOrder");
         }
+
+        public ActionResult ViewDriverByID()
+        {
+            driverdetail d1 = new driverdetail();
+            d1.id = Convert.ToInt32(Request.Params["id"]);
+            //d1.driverid = (Guid)["driverid"];
+            d1.drivername = Request.Params["drivername"];
+            d1.age = Request.Params["age"];
+            d1.mobileno = Request.Params["mobileno"];
+            d1.address = Request.Params["address"];
+            d1.licanceno = Request.Params["licanceno"];
+            d1.vehicleno = Request.Params["vehicleno"];
+            d1.residenceno = Request.Params["residenceno"];
+            d1.familyno = Request.Params["familyno"];
+            d1.relation = Request.Params["relation"];
+            d1.bgroup = Request.Params["bgroup"];
+            d1.bankname = Request.Params["bankname"];
+            d1.branchname = Request.Params["branchname"];
+            d1.acno = Request.Params["acno"];
+            d1.ifsccode = Request.Params["ifsccode"];
+            d1.isactive = (Request.Params["isactive"] == "1");
+
+            DataTable dt = DriverLogic.SelectAll();
+
+            return View(dt);
+        }
+
+        //public ActionResult AssignMethod()
+        //{
+        //    DeliveryEntities1 de = new DeliveryEntities1();
+
+        //}
         
     }
 }

@@ -181,14 +181,15 @@ namespace DeliveryManagement.Controllers
         }
 
         [HttpPost]
-        public ActionResult AssignDriver()
+        public ActionResult AssignDriver(FormCollection collection)
         {
-            int id = Convert.ToInt32(Request.Params["id"]);
-            order_master dd = OrderLogic.SelectByPK(id);
+            int orderId = Convert.ToInt32(collection["orderId"]);
+          //  int id = Convert.ToInt32(Request.Params["id"]);
+            order_master dd = OrderLogic.SelectByPK(orderId);
 
-             //dd.id = Convert.ToInt32(Request.Params["id"]);
-             dd.driverid = (System.Guid.Parse(Request.Params["driverid"]));
-
+            //dd.id = Convert.ToInt32(Request.Params["id"]);
+            dd.id = Convert.ToInt32(collection["orderId"]);
+            dd.driverid = (System.Guid.Parse(Request.Params["driverid"]));
 
             OrderLogic.UpdateID(dd);
 

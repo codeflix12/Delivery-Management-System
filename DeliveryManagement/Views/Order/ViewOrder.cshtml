@@ -267,6 +267,7 @@
 											<th>Mobile Num</th>
 											<th>Item</th>
                                             <th>Charge</th>
+                                            <th class="hidden-phone">Assign Driver</th>
 											<th class="hidden-phone">Edit</th>
 											<th class="hidden-phone">Delete</th>
 										</tr>
@@ -283,6 +284,7 @@
                                         <td>@Model.Rows[i]["mobileno"]</td>
                                         <td>@Model.Rows[i]["pickupitem"]</td>
                                         <td>@Model.Rows[i]["deliverycharge"]</td>
+                                        <td><a href="~/Order/ViewDriverByID?id=@Model.Rows[i]["id"]&orderno=@Model.Rows[i]["orderno"]">Assign</a></td>
                                         <td><a href="~/Order/OrderEdit?id=@Model.Rows[i]["id"]">Edit</a></td>
                                         <td><a href="~/Order/OrderDelete?id=@Model.Rows[i]["id"]">Delete</a></td>
                                         </tr>

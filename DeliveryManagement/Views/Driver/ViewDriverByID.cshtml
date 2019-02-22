@@ -41,7 +41,7 @@
                                     if(@Model.Rows[i]["isactive"] == true)
                                      {
                                         <form method="post" action="AssignDriver?id=@Model.Rows[i]["id"]&driverid=@Model.Rows[i]["driverid"]">
-                                        
+                                        @*<input type="hidden" name="id" value="@Model.id" />*@
                                        <input type="text" value="@Model.Rows[i]["drivername"]" />
                                         <input type="text" value="@Model.Rows[i]["driverid"]" />
                                         <input type="submit" value="Assign" />
