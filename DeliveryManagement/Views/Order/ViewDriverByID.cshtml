@@ -1,0 +1,25 @@
+﻿
+
+@{
+    ViewBag.Title = "ViewDriverByID";
+}
+
+<h2>ViewDriverByID</h2>
+
+
+
+ @for(int i=0 ; i<Model.Rows.Count; i++)
+                                {
+                                    if(@Model.Rows[i]["isactive"] == true)
+                                     {
+                                        <form method="post" action="/Driver/AssignDriver?id=@Model.Rows[i]["id"]&driverid=@Model.Rows[i]["driverid"]">
+                                       <input type="hidden" id="orderId" name="orderId"  value="@Request.Params["id"]" />
+                                       @*<input type="text" name="id" value="@Model.Rows[i]["orderno"]" />*@
+                                       <input type="text" value="@Model.Rows[i]["drivername"]" />
+                                        <input type="text" value="@Model.Rows[i]["driverid"]" />
+                                        <input type="submit" value="Assign" />
+                                        
+                                        
+                                        </form>
+                                     }
+                                }

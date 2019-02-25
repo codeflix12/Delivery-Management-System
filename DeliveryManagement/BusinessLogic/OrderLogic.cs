@@ -125,16 +125,26 @@ namespace DeliveryManagement.BusinessLogic
             return DBHelper.ModifyData(query, parameters);
         }
 
-        public static order_master UpdateID(order_master dt)
+
+
+        public static int UpdateID(order_master dt)
         {
             string query = "UPDATE order_master SET driverid = @driverid WHERE id = @id";
 
             List<SqlParameter> parameters = new List<SqlParameter>();
 
-            parameters.Add(new SqlParameter("@id", dt.id));
-            parameters.Add(new SqlParameter("@driverid", dt.driverid));
+
+            int id = Convert.ToInt32(dt.id);
+            System.Guid driverId = dt.driverid;
+
+            parameters.Add(new SqlParameter("@id", id));
+            parameters.Add(new SqlParameter("@driverid", driverId));
 
             return DBHelper.ModifyData(query, parameters);
+
+            //SqlConnection connection = new SqlConnection("Data Source=LAPTOP-CELLHC4D;Initial Catalog=Delivery;Persist Security Info=True;User ID=sa;Password=root;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            //SqlCommand commend = new SqlCommand()
+
         }
 
 

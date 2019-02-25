@@ -128,6 +128,7 @@
     <Compile Include="Class\AdminSiteConfiguration.cs" />
     <Compile Include="Class\AdminUtilities.cs" />
     <Compile Include="Class\Utilities.cs" />
+    <Compile Include="Controllers\ApiDemoController.cs" />
     <Compile Include="Controllers\DemoWebApiController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\IncludeController.cs" />
