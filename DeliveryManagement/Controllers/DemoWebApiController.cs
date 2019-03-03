@@ -14,16 +14,16 @@ namespace DeliveryManagement.Controllers
         [HttpGet]
         public string getName()
         {
-            return "Jay";
+            return "xyz";
         }
 
-        public IEnumerable<order_master> Get()
-        {
-            using (DeliveryEntities1 entities = new DeliveryEntities1())
-            {
-                return entities.order_master.ToList();
-            }
-        }
+        //public IEnumerable<order_master> Get()
+        //{
+        //    using (DeliveryEntities1 entities = new DeliveryEntities1())
+        //    {
+        //        return entities.order_master.ToList();
+        //    }
+        //}
 
     }
 }

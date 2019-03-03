@@ -124,6 +124,7 @@
     <Compile Include="BusinessLogic\AdminLogic.cs" />
     <Compile Include="BusinessLogic\DBHelper.cs" />
     <Compile Include="BusinessLogic\DriverLogic.cs" />
+    <Compile Include="BusinessLogic\LocationLogic.cs" />
     <Compile Include="BusinessLogic\OrderLogic.cs" />
     <Compile Include="Class\AdminSiteConfiguration.cs" />
     <Compile Include="Class\AdminUtilities.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Controllers\DemoWebApiController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\IncludeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="DataAccess\DBHelper.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="IService1.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\driverdetails.cs" />
+    <Compile Include="Models\location.cs" />
     <Compile Include="Models\order_master.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -3272,6 +3275,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Order\ViewDriverByID.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Location\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
