@@ -85,3 +85,4 @@ C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryMan
 C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.csprojResolveAssemblyReference.cache
 C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.dll
 C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\obj\Debug\DeliveryManagement.pdb
+C:\Users\Dhruvam Thakkar\Desktop\Project-Delivery\DeliveryManagement\DeliveryManagement\bin\DeliveryManagement.dll.config

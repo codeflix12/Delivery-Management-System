@@ -57,5 +57,6 @@ namespace DeliveryManagement
         public string isread { get; set; }
         public string isremove { get; set; }
         public Nullable<bool> isactive { get; set; }
+        public IEnumerable<order_master> obj { get; set; }
     }
 }

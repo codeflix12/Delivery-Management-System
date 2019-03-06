@@ -50,5 +50,6 @@ namespace DeliveryManagement.Models
         public bool isread;
         public bool isremove;
         public bool isactive;
+       
     }
 }
